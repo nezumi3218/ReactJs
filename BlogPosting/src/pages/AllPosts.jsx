@@ -5,12 +5,14 @@ import { useEffect, useState } from 'react'
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
-    useEffect(() => {},[])
-    appwriteService.getPosts([]).then((posts) => {
+    useEffect(() => {
+        appwriteService.getPosts([]).then((posts) => {
         if (posts) {
             setPosts(posts.documents)
         }
     })
+    },[])
+    
   return (
     <div className='w-full py-8'>
          <Container>

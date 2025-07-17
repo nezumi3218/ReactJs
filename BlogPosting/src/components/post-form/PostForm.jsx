@@ -93,6 +93,7 @@ function PostForm({post}) {
         <div className='w-1/3 px-2'>
                 <Input
                     label="Featured Image: "
+                    
                     type="file"
                     className="mb-4"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
@@ -108,7 +109,8 @@ function PostForm({post}) {
                     </div>
                 )}
                 <Select
-                    options={["active", "inactive"]}
+                    options={["active " , "inactive"]}
+                    
                     label="Status"
                     className="mb-4"
                     {...register("status", { required: true})}
